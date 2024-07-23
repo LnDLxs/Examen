@@ -1,0 +1,26 @@
+{% extends './layout.html' %}#
+
+
+{% block titulo %} ejercicio1 {% endblock %}
+
+
+{% block body %}
+
+<form action="/ejercicio1" method="POST">
+    <h2>Calculo de compras</h2>
+    <label for="nombre">Ingresa tu nombre</label>
+    <input type="text" name="nombre" required><br>
+    <label for="edad">Ingresa tu edad</label>
+    <input type="number" name="edad" required><br>
+    <label for="cantidad">Ingresa la cantidad de tarros de pintura a comprar</label>
+    <input type="number" name="cantidad" required><br>
+    <input type="submit" value="Calcular" class="btn-form">
+    {% if resultado %}
+    <p>Nombre: {{ resultado.nombre }}</p>
+    <p>Total sin descuento: ${{ resultado.total_sin_descuento }}</p>
+    <p>Monto de descuento: ${{ resultado.monto_descuento }}</p>
+    <p>Total con descuento: ${{ resultado.total_con_descuento }}</p>
+{% endif %}
+</form>
+
+{% endblock %}

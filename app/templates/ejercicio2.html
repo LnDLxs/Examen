@@ -1,0 +1,20 @@
+{% extends './layout.html' %}
+
+{% block titulo %} ejercicio2 {% endblock %}
+
+<link rel="stylesheet" href="/app/static/css/form.css">
+{% block body %}
+<form method="post">
+    <h2>Inicio de sesión</h2>
+    <label for="nombre">Ingresa tu nombre</label>
+    <input type="text" name="nombre"placeholder= "">
+    <label for ="password"></label>Ingresa tu contraseña</label>
+    <input type="password" name="password" placeholder= "">
+    <button type="submit" class="btn-form">Verificar</button>
+    {% if mensaje %}
+        <p>{{ mensaje }}</p>
+    {% endif %}
+</form>
+
+
+{% endblock %}

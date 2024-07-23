@@ -1,0 +1,14 @@
+{% extends './layout.html' %}
+
+{% block titulo %} index {% endblock %}
+<link rel="stylesheet" href="{{ url_for('static', filename= 'css/layout.css') }}">
+{% block body %}
+
+<div class="container">
+    <div class="buttons">
+        <a href="ejercicio1" class= "btn btn-1">Ejercicio1</a>
+        <a href="ejercicio2" class= "btn btn-2">Ejercicio2</a>
+    </div>
+</div>
+
+{% endblock %}
